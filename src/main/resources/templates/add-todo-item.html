@@ -30,6 +30,7 @@
               placeholder="Add a description"
             />
             <span
+              class="text-danger"
               th:if="${#fields.hasErrors('description')}"
               th:errors="*{description}"
             ></span>
