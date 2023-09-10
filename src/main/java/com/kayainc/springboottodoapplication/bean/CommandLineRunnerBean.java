@@ -11,6 +11,7 @@ public class CommandLineRunnerBean {
     
     public CommandLineRunner commandLineRunnerMethod() {
         return args->{
+            // Program başlangıcında otomatik veriler oluşturmak istiyorsak bunu kullanıyoruz
             log.info("Dataset created");
         };
     }
