@@ -4,5 +4,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import com.kayainc.springboottodoapplication.models.TodoItem;
 
-public interface TodoItemRepository extends CrudRepository<TodoItem, Long>{
+public interface TodoItemRepository extends CrudRepository<TodoItem, Long> {
+    // <TodoItem, Long> -> Long = TodoItem>Id->DataType
 }
