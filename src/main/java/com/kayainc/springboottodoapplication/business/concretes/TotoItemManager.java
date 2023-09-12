@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
+import org.thymeleaf.expression.Arrays;
 
 import com.kayainc.springboottodoapplication.bean.ModelMapperBean;
 import com.kayainc.springboottodoapplication.business.abstracts.IEntityService;
@@ -18,6 +19,10 @@ import lombok.RequiredArgsConstructor;
 import java.time.*;
 
 import java.util.ArrayList;
+
+import java.util.Arrays.*;
+
+import java.util.stream.Collectors;
 
 // Lombok
 @RequiredArgsConstructor // Injection
@@ -79,6 +84,25 @@ public class TotoItemManager implements IEntityService<TodoItem> {
             todoItemRepository.delete(todoItemEntity);
         }
         return todoItemEntity;
+    }
+
+    @Override
+    @Transactional
+    public ArrayList<TodoItem> deleteAll(boolean willUncompletedTasksBeDeleted) {
+
+        ArrayList<TodoItem> todoItems;
+
+        if (!willUncompletedTasksBeDeleted) {
+            todoItems = new ArrayList<TodoItem>(getAll());
+            todoItems.removeIf(t -> t.isComplete() == false);
+        } else {
+            todoItems = new ArrayList<TodoItem>(getAll());
+        }
+
+        for (TodoItem todoItem : todoItems) {
+            delete(todoItem.getId());
+        }
+        return todoItems;
     }
     
 }

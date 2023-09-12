@@ -79,5 +79,10 @@ public class TodoItemApi implements IEntityApi<TodoItem> {
     public ResponseEntity<?> delete(@PathVariable(name = "id") Long id) {
         return ResponseEntity.ok(entityService.delete(id));
     }
-    
+
+    @Override
+    @PostMapping(value = "/deleteall/{willUncompletedTasksBeDeleted}")
+    public ResponseEntity<?> deleteAll(@PathVariable(name = "willUncompletedTasksBeDeleted") boolean willUncompletedTasksBeDeleted) {
+        return ResponseEntity.ok(entityService.deleteAll(willUncompletedTasksBeDeleted));
+    }
 }
