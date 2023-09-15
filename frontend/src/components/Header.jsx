@@ -10,7 +10,26 @@ class Header extends Component {
   }
 
   render() {
-    return <div>Header</div>;
+    return (
+      <div>
+        <nav class="navbar navbar-expand navbar-dark bg-dark">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="#" aria-current="page">
+                {/* <i class={this.props.bars}></i> */}
+                To Do List
+                <span class="visually-hidden">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                Add a task
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    );
   }
 }
 
