@@ -80,6 +80,7 @@ public class TodoItemApi implements IEntityApi<TodoItem> {
         return ResponseEntity.ok(entityService.delete(id));
     }
 
+    // http://localhost:8080/api/v1/deleteall/willUncompletedTasksBeDeleted
     @Override
     @PostMapping(value = "/deleteall/{willUncompletedTasksBeDeleted}")
     public ResponseEntity<?> deleteAll(@PathVariable(name = "willUncompletedTasksBeDeleted") boolean willUncompletedTasksBeDeleted) {
