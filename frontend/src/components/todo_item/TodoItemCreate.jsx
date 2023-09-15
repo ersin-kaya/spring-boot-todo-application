@@ -25,6 +25,7 @@ function TodoItemCreate({ t }) {
     try {
       const response = await TodoItemService.add(newTodoItem);
       navigate("/todoItem/list");
+      window.location.reload();
     } catch (err) {
       setError(err.response.data.validationErrors);
     }

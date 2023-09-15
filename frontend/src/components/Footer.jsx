@@ -12,11 +12,11 @@ class Footer extends Component {
   render() {
     return (
       <div>
-        <footer className="footer bg-dark text-light text-center text-lg-start">
+        {/* <footer className="footer bg-dark text-light text-center text-lg-start">
           <div className="text-center p-4">
             <i className={this.props.copyright}></i> 2023
           </div>
-        </footer>
+        </footer> */}
       </div>
     );
   }

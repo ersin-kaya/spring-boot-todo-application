@@ -21,7 +21,7 @@ nav {
 
 .create-title {
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .create-body {
@@ -67,7 +67,7 @@ nav {
 
 .list-title {
   text-align: center;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 .list-body {
@@ -140,6 +140,41 @@ nav {
   background-color: #ec1843;
   border: none;
   width: 48%;
+}
+
+.update-title {
+  text-align: center;
+  margin: 2rem 0 1rem;
+}
+
+.update-body {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-radius: 3px;
+}
+
+.update-body .update-input {
+  width: 100%;
+  outline: none;
+  padding: 5px;
+  padding-left: 15px;
+  border-color: rgba(128, 128, 128, 0.25);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+.update-body .update-button {
+  background-color: #00a5ba;
+  border: none;
+  width: 100%;
+  margin-top: 0.75rem;
+}
+
+.update-body .update-button:hover {
+  background-color: #00a5ba;
 }
 
 .footer {

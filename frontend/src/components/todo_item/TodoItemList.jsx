@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { withTranslation } from "react-i18next";
 import TodoItemService from "../../services/TodoItemService";
 import { Link } from "react-router-dom";
+import TodoItemCreate from "./TodoItemCreate";
 
 function TodoItemList({ t, i18n, props }) {
   // Redirect
@@ -81,6 +82,8 @@ function TodoItemList({ t, i18n, props }) {
 
   return (
     <div>
+      <TodoItemCreate />
+
       <h3 className="list-title">TodoList</h3>
       <div className="list-body">
         <div className="list-buttons-block">

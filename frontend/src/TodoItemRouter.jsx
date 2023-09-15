@@ -30,7 +30,6 @@ class TodoItemRouter extends Component {
     return (
       <div>
         <Header bars="fa-solid fa-bars" />
-
         <div className="container">
           <Routes>
             <Route path="/" element={<TodoItemList />} />

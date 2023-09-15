@@ -50,42 +50,44 @@ function TodoItemUpdate({ t }) {
 
   return (
     <div>
-      <form>
-        <h2 className="display-3 mt-5">{t("Task update")}</h2>
-        <div className="form-group mt-4">
-          <input
-            type="text"
-            className="form-control"
-            placeholder={t("Description")}
-            required={true}
-            autoFocus={true}
-            id="todo_description"
-            name="todo_description"
-            onChange={(event) => {
-              setTodoItem(event.target.value);
-            }}
-            value={todoItem}
-          />
-          <div className="form-check mt-2">
+      <h3 className="update-title">{t("TaskUpdate")}</h3>
+      <div className="update-body">
+        <form>
+          <div className="form-group mt-4">
             <input
-              className="form-check-input"
-              type="checkbox"
-              checked={checked}
-              onChange={handleChange}
+              type="text"
+              className="update-input form-control"
+              placeholder={t("Description")}
+              required={true}
+              autoFocus={true}
+              id="todo_description"
+              name="todo_description"
+              onChange={(event) => {
+                setTodoItem(event.target.value);
+              }}
+              value={todoItem}
             />
-            <label className="form-check-label" htmlFor="">
-              Status
-            </label>
+            <div className="form-check mt-2">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                checked={checked}
+                onChange={handleChange}
+              />
+              <label className="form-check-label" htmlFor="">
+                Task Status
+              </label>
+            </div>
           </div>
-        </div>
-        <button
-          type="submit"
-          className="btn btn-primary mt-2 mb-5"
-          onClick={todoItemUpdate}
-        >
-          {t("Update")}
-        </button>
-      </form>
+          <button
+            type="submit"
+            className="update-button btn btn-primary"
+            onClick={todoItemUpdate}
+          >
+            {t("Update")}
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
