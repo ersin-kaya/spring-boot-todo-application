@@ -38,7 +38,7 @@ function TodoItemList({ t, i18n, props }) {
 
   // GetById
   const getById = (id) => {
-    localStorage.setItem("todoItem_update_id", id);
+    localStorage.setItem("todoItem_detail_id", id);
   };
 
   // Update
