@@ -74,6 +74,9 @@ function TodoItemList({ t, i18n, props }) {
             <th>{t("Created Date")}</th>
             <th>{t("Modified Date")}</th>
             <th>{t("Complete")}</th>
+            <th></th>
+            <th></th>
+            <th></th>
           </tr>
         </thead>
         <tbody>

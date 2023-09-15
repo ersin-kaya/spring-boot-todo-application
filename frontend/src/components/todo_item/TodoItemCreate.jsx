@@ -24,6 +24,7 @@ function TodoItemCreate({ t }) {
     setError(undefined);
     try {
       const response = await TodoItemService.add(newTodoItem);
+      navigate("/todoItem/list");
     } catch (err) {
       setError(err.response.data.validationErrors);
     }
@@ -37,7 +38,7 @@ function TodoItemCreate({ t }) {
   return (
     <div>
       <form>
-        <h2 className="display-3 mt-4">{t("Add a task")}</h2>
+        <h2 className="display-3 mt-4">{t("Add a Todo!")}</h2>
         <div className="form-group">
           <input
             type="text"
@@ -45,8 +46,8 @@ function TodoItemCreate({ t }) {
             placeholder={t("Description")}
             required={true}
             autoFocus={true}
-            id="category_data"
-            name="category_data"
+            id="todo_description"
+            name="todo_description"
             onChange={todoItemOnChange}
           />
           {error ? (

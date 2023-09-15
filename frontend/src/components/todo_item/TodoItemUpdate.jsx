@@ -66,7 +66,7 @@ function TodoItemUpdate({ t }) {
             }}
             value={todoItem}
           />
-          <div className="form-check mt-3">
+          <div className="form-check mt-2">
             <input
               className="form-check-input"
               type="checkbox"
@@ -80,10 +80,10 @@ function TodoItemUpdate({ t }) {
         </div>
         <button
           type="submit"
-          className="btn btn-primary mt-3 mb-5"
+          className="btn btn-primary mt-2 mb-5"
           onClick={todoItemUpdate}
         >
-          {t("update")}
+          {t("Update")}
         </button>
       </form>
     </div>

@@ -34,10 +34,7 @@ export default function TodoItemDetail() {
           <p className="card-title"> {TodoItemDetailService.description}</p>
           <p className="card-text"> {TodoItemDetailService.createdDate}</p>
           <p className="card-text"> {TodoItemDetailService.modifiedDate}</p>
-          <p className="card-text">
-            {" "}
-            {TodoItemDetailService.complete.toString()}
-          </p>
+          <p className="card-text"> {TodoItemDetailService.complete + ""}</p>
         </div>
       </div>
     </div>
