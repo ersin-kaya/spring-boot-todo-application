@@ -107,7 +107,7 @@ function TodoItemList({ t, i18n, props }) {
               </td>
 
               <td>
-                <Link to={`/todoItem/delete}`}>
+                <Link to={`/todoItem/delete/${data.id}`}>
                   <i
                     onClick={() => deleteTodoItem(data.id)}
                     className="fa-solid fa-trash text-danger"
