@@ -5,7 +5,7 @@ import { withTranslation } from "react-i18next";
 import TodoItemService from "../../services/TodoItemService";
 import { Link } from "react-router-dom";
 
-function TodoItemList({ t, i18n, props }) {
+function TodoItemListTodo({ t, i18n, props }) {
   // Redirect
   let navigate = useNavigate();
 
@@ -14,7 +14,7 @@ function TodoItemList({ t, i18n, props }) {
 
   // UseEffect
   useEffect(() => {
-    TodoItemService.getAll()
+    TodoItemService.getAllTodo()
       .then((response) => {
         // console.log(response.data);
         setTodoItemStateService(response.data);
@@ -59,24 +59,24 @@ function TodoItemList({ t, i18n, props }) {
   const deleteTodoItem = (id) => {
     if (window.confirm("Want to delete?")) {
       TodoItemService.delete(id).then(() => {
-        getAll();
+        TodoItemService.getAllTodo();
       });
     } else {
       alert("Couldn't delete this task.");
     }
-    navigate("/todoItem/list");
+    navigate("/todoItem/list/done");
   };
 
   // DeleteAll
   const deleteAll = (willUncompletedTasksBeDeleted) => {
     if (window.confirm("Want to delete?")) {
       TodoItemService.deleteAll(willUncompletedTasksBeDeleted).then(() => {
-        getAll();
+        TodoItemService.getAllTodo();
       });
     } else {
-      alert("Couldn't delete this task.");
+      alert("Couldn't delete these tasks.");
     }
-    navigate("/todoItem/list");
+    navigate("/todoItem/list/todo");
   };
 
   return (
@@ -203,4 +203,4 @@ function TodoItemList({ t, i18n, props }) {
   );
 }
 
-export default withTranslation()(TodoItemList);
+export default withTranslation()(TodoItemListTodo);

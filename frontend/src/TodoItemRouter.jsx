@@ -6,6 +6,8 @@ import Main from "./components/Main";
 import Footer from "./components/Footer";
 
 import TodoItemList from "./components/todo_item/TodoItemList";
+import TodoItemListDone from "./components/todo_item/TodoItemListDone";
+import TodoItemListTodo from "./components/todo_item/TodoItemListTodo";
 import TodoItemCreate from "./components/todo_item/TodoItemCreate";
 import TodoItemUpdate from "./components/todo_item/TodoItemUpdate";
 import TodoItemDetail from "./components/todo_item/TodoItemDetail";
@@ -33,6 +35,8 @@ class TodoItemRouter extends Component {
           <Routes>
             <Route path="/" element={<TodoItemList />} />
             <Route path="/todoItem/list" element={<TodoItemList />} />
+            <Route path="/todoItem/list/done" element={<TodoItemListDone />} />
+            <Route path="/todoItem/list/todo" element={<TodoItemListTodo />} />
             <Route path="/todoItem/create" element={<TodoItemCreate />} />
             <Route path="/todoItem/update/:id" element={<TodoItemUpdate />} />
             <Route path="/todoItem/detail/:id" element={<TodoItemDetail />} />

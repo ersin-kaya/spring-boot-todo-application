@@ -9,6 +9,16 @@ class TodoItemService {
     return axios.get(`${todoItemUrl}/getall`);
   }
 
+  // /getalldone
+  getAllDone() {
+    return axios.get(`${todoItemUrl}/getalldone`);
+  }
+
+  // /getalltodo
+  getAllTodo() {
+    return axios.get(`${todoItemUrl}/getalltodo`);
+  }
+
   // /getbyid/id
   getById(id) {
     return axios.get(`${todoItemUrl}/getbyid/${id}`);
