@@ -5,12 +5,14 @@ import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
 
-import { TodoItemList } from "./components/todo_item/TodoItemList";
-import { TodoItemCreate } from "./components/todo_item/TodoItemCreate";
-import { TodoItemUpdate } from "./components/todo_item/TodoItemUpdate";
+import TodoItemList from "./components/todo_item/TodoItemList";
+import TodoItemCreate from "./components/todo_item/TodoItemCreate";
+import TodoItemUpdate from "./components/todo_item/TodoItemUpdate";
 // import {TodoItemView} from "./components/todo_item/TodoItemView";
 
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
+
+import { withTranslation } from "react-i18next";
 
 class TodoItemRouter extends Component {
   static displayName = "TodoItem_Router";
