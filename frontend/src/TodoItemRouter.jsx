@@ -35,7 +35,7 @@ class TodoItemRouter extends Component {
             <Route path="/todoItem/list" element={<TodoItemList />} />
             <Route path="/todoItem/create" element={<TodoItemCreate />} />
             <Route path="/todoItem/update/:id" element={<TodoItemUpdate />} />
-            <Route path="/todoItem/view/:id" element={<TodoItemDetail />} />
+            <Route path="/todoItem/detail/:id" element={<TodoItemDetail />} />
 
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
