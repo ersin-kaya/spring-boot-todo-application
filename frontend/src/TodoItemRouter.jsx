@@ -12,7 +12,7 @@ import { TodoItemUpdate } from "./components/todo_item/TodoItemUpdate";
 
 import { Routes, Route } from "react-router-dom";
 
-export default class TodoItemRouter extends Component {
+class TodoItemRouter extends Component {
   static displayName = "TodoItem_Router";
 
   constructor(props) {
@@ -44,3 +44,6 @@ export default class TodoItemRouter extends Component {
     );
   }
 }
+
+// Higher-Order Component
+export default withTranslation()(TodoItemRouter);
