@@ -1,10 +1,13 @@
 body {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
 }
 
 code {
@@ -14,6 +17,50 @@ code {
 
 nav {
   margin-bottom: 3rem;
+}
+
+.create-title {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.create-body {
+  padding: 15px;
+  border: 1px solid rgba(128, 128, 128, 0.25);
+  border-radius: 3px;
+}
+
+.create-body .input-block {
+  position: relative;
+}
+
+.create-body .input-block .new-todo-icon {
+  color: white;
+  background-color: #00a5ba;
+  padding: 10px;
+  position: absolute;
+  border-radius: 3px;
+}
+
+.create-body .input-block .new-todo-input {
+  width: 100%;
+  outline: none;
+  padding: 5px;
+  padding-left: 45px;
+  border-color: rgba(128, 128, 128, 0.25);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 3px;
+}
+
+.create-body .new-todo-button {
+  background-color: #00a5ba;
+  border: none;
+  width: 100%;
+}
+
+.create-body .new-todo-button:hover {
+  background-color: #00a5ba;
 }
 
 .footer {

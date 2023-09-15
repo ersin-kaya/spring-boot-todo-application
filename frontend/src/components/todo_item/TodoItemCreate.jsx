@@ -37,8 +37,33 @@ function TodoItemCreate({ t }) {
 
   return (
     <div>
-      <form>
-        <h2 className="display-3 mt-4">{t("Add a Todo!")}</h2>
+      <h3 className="create-title">TodoInput</h3>
+      <div className="create-body">
+        <form>
+          <div className="input-block">
+            <i class="new-todo-icon fa-solid fa-book"></i>
+            <input
+              type="text"
+              className="new-todo-input form-control"
+              placeholder={t("New Todo")}
+              required={true}
+              autoFocus={true}
+              id="todo_description"
+              name="todo_description"
+              onChange={todoItemOnChange}
+            />
+          </div>
+          <button
+            type="submit"
+            className="new-todo-button btn btn-primary mt-3"
+            disabled={!true}
+            onClick={todoItemCreate}
+          >
+            {t("Add new task")}
+          </button>
+
+          {/* Old Design */}
+          {/* <h2 className="display-3 mt-4">{t("Add a Todo!")}</h2>
         <div className="form-group">
           <input
             type="text"
@@ -65,8 +90,9 @@ function TodoItemCreate({ t }) {
           onClick={todoItemCreate}
         >
           {t("Add")}
-        </button>
-      </form>
+        </button> */}
+        </form>
+      </div>
     </div>
   );
 }
