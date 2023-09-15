@@ -47,7 +47,7 @@ function TodoItemCreate({ t }) {
               className="new-todo-input form-control"
               placeholder={t("New Todo")}
               required={true}
-              autoFocus={true}
+              autoFocus={false}
               id="todo_description"
               name="todo_description"
               onChange={todoItemOnChange}
