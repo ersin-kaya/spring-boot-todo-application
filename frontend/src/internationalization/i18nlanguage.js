@@ -7,7 +7,9 @@ i18n.use(initReactI18next).init({
       translations: {
         id: "ID",
         task: "Task",
+        tasks: "Tasks",
         description: "Description",
+        detail: "Detail",
         create: "Create",
         update: "Update",
         delete: "Delete",
@@ -18,7 +20,9 @@ i18n.use(initReactI18next).init({
       translations: {
         id: "ID",
         task: "Görev",
+        tasks: "Görevler",
         description: "Açıklama",
+        detail: "Detay",
         create: "Ekle",
         update: "Güncelle",
         delete: "Sil",
