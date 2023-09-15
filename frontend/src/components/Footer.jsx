@@ -10,7 +10,15 @@ class Footer extends Component {
   }
 
   render() {
-    return <div>Footer</div>;
+    return (
+      <div>
+        <footer className="bg-dark text-light text-center text-lg-start">
+          <div className="text-center p-4">
+            <i className={this.props.copyright}></i> 2023
+          </div>
+        </footer>
+      </div>
+    );
   }
 }
 
