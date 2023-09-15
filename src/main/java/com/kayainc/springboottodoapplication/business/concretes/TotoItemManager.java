@@ -45,6 +45,32 @@ public class TotoItemManager implements IEntityService<TodoItem> {
     }
 
     @Override
+    public List<TodoItem> getAllDone() {
+        Iterable<TodoItem> todoItemEntities = todoItemRepository.findAll();
+        List<TodoItem> todoItemArrayList = new ArrayList<>();
+
+        for(TodoItem todoItemEntity : todoItemEntities) {
+            if (todoItemEntity.isComplete()) {
+                todoItemArrayList.add(todoItemEntity);
+            }
+        }
+        return todoItemArrayList;
+    }
+
+    @Override
+    public List<TodoItem> getAllTodo() {
+        Iterable<TodoItem> todoItemEntities = todoItemRepository.findAll();
+        List<TodoItem> todoItemArrayList = new ArrayList<>();
+
+        for(TodoItem todoItemEntity : todoItemEntities) {
+            if (!todoItemEntity.isComplete()) {
+                todoItemArrayList.add(todoItemEntity);
+            }
+        }
+        return todoItemArrayList;
+    }
+
+    @Override
     public TodoItem getById(Long id) {
         TodoItem todoItemEntity = null;
         todoItemEntity = todoItemRepository.findById(id).get();

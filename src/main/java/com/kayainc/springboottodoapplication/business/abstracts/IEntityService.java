@@ -6,6 +6,8 @@ import java.util.ArrayList;
 public interface IEntityService<Entity> {
 
     public List<Entity> getAll();
+    public List<Entity> getAllDone();
+    public List<Entity> getAllTodo();
     public Entity getById(Long id);
     public Entity add(Entity entity);
     public Entity update(Long id, Entity entity);

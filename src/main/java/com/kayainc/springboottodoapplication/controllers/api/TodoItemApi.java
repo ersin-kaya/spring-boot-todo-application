@@ -52,6 +52,20 @@ public class TodoItemApi implements IEntityApi<TodoItem> {
         return ResponseEntity.ok(entityService.getAll());
     }
 
+    // http://localhost:8080/api/v1/getalldone
+    @Override
+    @GetMapping(value = "/getalldone")
+    public ResponseEntity<List<TodoItem>> getAllDone() {
+        return ResponseEntity.ok(entityService.getAllDone());
+    }
+
+    // http://localhost:8080/api/v1/getalltodo
+    @Override
+    @GetMapping(value = "/getalltodo")
+    public ResponseEntity<List<TodoItem>> getAllTodo() {
+        return ResponseEntity.ok(entityService.getAllTodo());
+    }
+
     // http://localhost:8080/api/v1/getbyid/id
     @Override
     @GetMapping(value = "/getbyid/{id}")
