@@ -28,13 +28,16 @@ export default function TodoItemDetail() {
 
   return (
     <div>
-      <div class="card">
-        <div class="card-body text-center">
-          <h5 class="card-title"> {TodoItemDetailService.id}</h5>
-          <p class="card-title"> {TodoItemDetailService.description}</p>
-          <p class="card-text"> {TodoItemDetailService.createdDate}</p>
-          <p class="card-text"> {TodoItemDetailService.modifiedDate}</p>
-          <p class="card-text"> {TodoItemDetailService.complete.toString()}</p>
+      <div className="card">
+        <div className="card-body text-center">
+          <h5 className="card-title"> {TodoItemDetailService.id}</h5>
+          <p className="card-title"> {TodoItemDetailService.description}</p>
+          <p className="card-text"> {TodoItemDetailService.createdDate}</p>
+          <p className="card-text"> {TodoItemDetailService.modifiedDate}</p>
+          <p className="card-text">
+            {" "}
+            {TodoItemDetailService.complete.toString()}
+          </p>
         </div>
       </div>
     </div>
